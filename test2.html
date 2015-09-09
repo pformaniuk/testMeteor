@@ -1,0 +1,73 @@
+<head>
+	<title>test2</title>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	 <div class="navbar-header">  
+	 	<a class="navbar-brand" >{{> location}} </a>
+	 </div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				{{> loginButtons}}
+			</ul>
+		</div>
+	</div>
+</body>
+
+<template name="hello">
+<button>Click Me</button>
+<p>You've pressed the button {{counter}} times.</p>
+</template>
+<template name="_loginButtonsAdditionalLoggedInDropdownActions">
+<button class="btn btn-default btn-block" id="login-buttons-edit-profile">Edit user info</button>
+</template>
+
+<template name='location'>
+	<p><strong>{{location}}</strong></p>
+</template>
+
+<template name="Home">
+	<br><br><br>
+	{{> messages}}
+	{{> entry}}
+</template>
+
+<template name='entry'>
+	<div class="navbar-fixed-bottom row-fluid">
+		<div class="input-group">
+			<input class="form-control" type="text" id="messageBox" placeholder="Your message">
+			<span class="input-group-btn">
+				<button class="btn" id="sendBtn">Submit</button>
+			</span>
+		</div>
+	</div>
+</template>
+
+<template name='messages'>
+	{{#each messages}}
+		{{> meassage}}
+	{{/each}}
+</template>
+
+<template name='meassage'>
+	<p><strong>{{name}}:</strong>{{message}}</p>>
+</template>
+
+<template name="profileEdit">
+<br><br><br>
+<button class="btn" id="profileEdit-edit">Save</button>
+<button class="btn" id="back_home">Back</button>
+<select id="select-dropdown" class="select-dropdown">
+	<option value ='us'>United States </option>
+	<option value = 'sp'>Spain</option>
+	<option value = 'ua'>Ukraine</option>
+</select>
+<div id="profileEdit_name" class="form-group">
+	<label for="usr">Name:</label>
+	<input type="text" class="form-control" id="usr" >
+</div>
+<div id="profileEdit_mail" class="form-group">
+	<label for="usr">Mail:</label>
+	<input  type="text" class="form-control" id="mail">
+</div>
+</template>

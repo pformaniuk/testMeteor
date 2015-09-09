@@ -1,0 +1,7 @@
+/* CSS declarations go here */
+.input-group {
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+}
+.inline-block { display: inline-block; }
